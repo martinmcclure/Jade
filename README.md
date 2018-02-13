@@ -14,11 +14,14 @@ Jade runs pretty well under [Wine](https://www.winehq.org/) and a pre-built Mac 
 
 ### Development Installation
 
-To install Jade in Dolphin 7, follow these steps:
+To install Martin's fork of Jade in Dolphin 7, follow these steps:
 
-1. Install a Github client such as [SourceTree](http://www.sourcetreeapp.com/).
-2. Clone [Dolphin](https://github.com/jgfoster/Dolphin) to Documents\Dolphin.
-3. Run Documents\Dolphin\BootPRO.cmd to build the DPRO image.
-4. Clone [Jade](https://github.com/jgfoster/Jade) to Documents\Dolphin\Jade.
-4. Run Documents\Dolphin\Jade\BootJade.cmd to build the JadeDev image.
-5. Finally, from the Additional Tools folder in the System Shell open the Jade Login.
+1. Install a Git client such as [SourceTree](http://www.sourcetreeapp.com/).
+2. Pick a place to put your local repositories and builds. I will call this place \Dolphin.
+3. Clone [Dolphin](https://github.com/martinmcclure/Dolphin) to \Dolphin.
+4. Clone [DolphinVM](https://github.com/martinmcclure/DolphinVM) to \Dolphin\DolphinVM.
+5. Follow the instructions in \Dolphin\DolphinVM\README.md to build the Dolphin VM using VisualStudio 2017.
+6. Run \Dolphin\BootDPRO.cmd to build the base Dolphin pro image, DPRO.img7.
+7. Clone [Jade](https://github.com/martinmcclure/Jade) to\Dolphin\Jade. (You can make this a Git subproject if you're comfortable with Git.)
+8. Run \Dolphin\Jade\BootJade.cmd to build the JadeDev image.
+9. Finally, from the Additional Tools folder in the System Shell open the Jade Login.
