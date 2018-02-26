@@ -9,7 +9,6 @@ package basicScriptAt: #postinstall put: '''Loaded: GemStone Session'' yourself.
 
 package classNames
 	add: #GciSession;
-	add: #GciSessionWithSocket;
 	add: #GsAnsiError;
 	add: #GsApplicationError;
 	add: #GsClientForwarderSend;
@@ -41,7 +40,6 @@ package classNames
 
 package methodNames
 	add: #Gcilw6x -> #jadeServerClass;
-	add: #LibGciMt_3_3 -> #jadeServerClass;
 	add: #LibGciRpc64 -> #jadeServerClass;
 	add: #LibGciRpc64_3_0 -> #jadeServerClass;
 	add: #LibGciRpc64_3_1 -> #jadeServerClass;
@@ -69,7 +67,6 @@ package setPrerequisites: (IdentitySet new
 	add: 'GemStone C Interface';
 	add: 'GemStone Objects';
 	add: 'JGF Fading Dialog';
-	add: '..\Core\Object Arts\Dolphin\Sockets\Sockets Connection';
 	add: '..\Core\Contributions\Camp Smalltalk\SUnit\SUnit';
 	yourself).
 
@@ -172,11 +169,6 @@ Notification subclass: #TerminateProcess
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-GciSession subclass: #GciSessionWithSocket
-	instanceVariableNames: 'socket'
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
 JadeServer subclass: #JadeServer32bit
 	instanceVariableNames: ''
 	classVariableNames: ''
@@ -235,14 +227,6 @@ jadeServerClass
 	^JadeServer32bit
 ! !
 !Gcilw6x categoriesFor: #jadeServerClass!public! !
-
-!LibGciMt_3_3 methodsFor!
-
-jadeServerClass
-
-	^JadeServer64bit33
-! !
-!LibGciMt_3_3 categoriesFor: #jadeServerClass!public! !
 
 !LibGciRpc64 methodsFor!
 
